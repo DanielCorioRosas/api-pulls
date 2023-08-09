@@ -1,6 +1,6 @@
 const breakfastPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve('your order is ready!!');
+        resolve('Your order is ready. Come and get it!');
     }, 3000);
 
 });
