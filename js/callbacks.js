@@ -21,7 +21,9 @@ function generateHTML(data) {
     const section = document.createElement('section');
     peopleList.appendChild(section);
     section.innerHTML = `
-      <img src=${data.thumbnail.source}>
+    ${data.type === 'standard' ? 
+    `<img src=${data.thumbnail.source}>` :
+    `<a href=${data.content_urls.desktop.page}>Wikipedia disambiguation page</a>`}
       <h2>${data.title}</h2>
       <p>${data.description}</p>
       <p>${data.extract}</p>
