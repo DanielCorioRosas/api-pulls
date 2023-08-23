@@ -19,7 +19,7 @@ function getProfiles(json) {
 
 // Generate the markup for each profile
 function generateHTML(data) {
-    data.map(person => {
+    data.forEach(person => {
         const section = document.createElement('section');
         peopleList.appendChild(section);
 

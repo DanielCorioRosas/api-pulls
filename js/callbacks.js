@@ -25,6 +25,7 @@ function getProfiles(json) {
 function generateHTML(data) {
     const section = document.createElement('section');
     peopleList.appendChild(section);
+
     section.innerHTML = `
     ${data.type === 'standard' ? 
     `<img src=${data.thumbnail.source}>` :

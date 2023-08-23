@@ -18,7 +18,6 @@ function getJSON(url) {
         xhr.onerror = () => reject(Error('A network error occurred'));
         xhr.send();
     });
-
 }
 
 function getProfiles(json) {

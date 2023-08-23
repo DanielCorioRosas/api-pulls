@@ -20,6 +20,7 @@ async function getPeopleInSpace(url) {
     return Promise.all(profiles);
 }
 
+
 // Generate the markup for each profile
 function generateHTML(data) {
     data.forEach(person => {
@@ -45,11 +46,10 @@ function generateHTML(data) {
     });
 }
 
-btn.addEventListener('click', async(event) => {
+btn.addEventListener('click', (event) => {
     event.target.textContent = "Loading...";
 
-    const astros = await getPeopleInSpace(astrosUrl);
-    generateHTML(astros);
-    event.target.remove();
-
+    getPeopleInSpace(astrosUrl)
+        .then(generateHTML)
+        .finally(() => event.target.remove())
 });
