@@ -32,7 +32,6 @@ function generateHTML(data) {
     data.forEach(person => {
         const section = document.createElement('section');
         peopleList.appendChild(section);
-
         // Check if request returns a 'standard' page from Wiki
         if (person.type === 'standard') {
             section.innerHTML = `
